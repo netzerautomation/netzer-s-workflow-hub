@@ -149,8 +149,8 @@
 @utility glass {
   background: linear-gradient(
     135deg,
-    oklch(1 0 0 / 0.85),
-    oklch(0.97 0.01 260 / 0.65)
+    color-mix(in oklab, var(--color-surface) 85%, transparent),
+    color-mix(in oklab, var(--color-background) 65%, transparent)
   );
   backdrop-filter: blur(14px) saturate(140%);
 }
@@ -166,10 +166,10 @@
     padding: 1px;
     background: linear-gradient(
       135deg,
-      var(--color-spectrum-1 / 0.4),
-      var(--color-spectrum-2 / 0.3),
-      var(--color-spectrum-3 / 0.3),
-      var(--color-spectrum-1 / 0.4)
+      color-mix(in oklab, var(--color-spectrum-1) 40%, transparent),
+      color-mix(in oklab, var(--color-spectrum-2) 30%, transparent),
+      color-mix(in oklab, var(--color-spectrum-3) 30%, transparent),
+      color-mix(in oklab, var(--color-spectrum-1) 40%, transparent)
     );
     background-size: 300% 300%;
     -webkit-mask: linear-gradient(#000 0 0) content-box,
